@@ -60,16 +60,10 @@ public class PlayerController : MonoBehaviour
         return isAllowed;
     }
 
-    public void KillPlayer() {
-
-        Scene currentScene = SceneManager.GetActiveScene();
-
-        SceneManager.LoadScene(currentScene.name);
-    }
-
     public void EmptySoldiers() {
 
         Debug.Log("Emptying Players");
+        LevelManager.instance.RemoveSoldier(currentSoldiers);
         currentSoldiers = 0;
     }
 }
