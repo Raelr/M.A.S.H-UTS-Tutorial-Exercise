@@ -9,6 +9,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float MoveSpeed;
 
+    [SerializeField]
+    int maxSoldiers;
+
+    int currentSoldiers;
+
     Rigidbody2D rigidbody;
 
     BoxCollider2D collider;
@@ -18,6 +23,8 @@ public class PlayerController : MonoBehaviour
         collider = GetComponent<BoxCollider2D>();
 
         rigidbody = GetComponent<Rigidbody2D>();
+
+        currentSoldiers = 0;
     }
 
     private void Update() {
@@ -36,5 +43,20 @@ public class PlayerController : MonoBehaviour
     void MovePlayer() {
 
         transform.Translate(velocity * MoveSpeed * Time.deltaTime); 
+    }
+
+    public bool AddSoldier() {
+
+        bool isAllowed;
+
+        if (currentSoldiers < maxSoldiers) {
+            currentSoldiers++;
+            isAllowed = true;
+        } else {
+            isAllowed = false;
+        }
+
+        Debug.Log(isAllowed);
+        return isAllowed;
     }
 }
