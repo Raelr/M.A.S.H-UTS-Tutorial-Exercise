@@ -60,10 +60,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Hospital.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SoldierController.cs" />
+    <Compile Include="Assets\Scripts\Tree.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Aryeh/Desktop/Uni Programming/2019 Autumn Semester/Game Studio 1/M.A.S.H UTS TUTORIAL/Mash-Game-UTS-Tutorial/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

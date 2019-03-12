@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -56,7 +57,19 @@ public class PlayerController : MonoBehaviour
             isAllowed = false;
         }
 
-        Debug.Log(isAllowed);
         return isAllowed;
+    }
+
+    public void KillPlayer() {
+
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        SceneManager.LoadScene(currentScene.name);
+    }
+
+    public void EmptySoldiers() {
+
+        Debug.Log("Emptying Players");
+        currentSoldiers = 0;
     }
 }
