@@ -10,6 +10,7 @@ public class SoldierController : MonoBehaviour
     void Start()
     {
         collider = GetComponent<BoxCollider2D>();
+        LevelManager.instance.IncrementSoldierCount();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
