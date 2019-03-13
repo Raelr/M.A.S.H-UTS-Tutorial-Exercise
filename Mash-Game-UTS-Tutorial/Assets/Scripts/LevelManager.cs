@@ -4,9 +4,12 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour
-{
+public class LevelManager : MonoBehaviour {
     public PlayerController Player { get { return player; } }
+
+    public Vector2 MinBounds { get {return minBounds;}}
+
+    public Vector2 MaxBounds { get { return maxBounds; } }
 
     [SerializeField]
     PlayerController player;
@@ -26,6 +29,13 @@ public class LevelManager : MonoBehaviour
 
     int totalSoldiers;
 
+    [SerializeField]
+    SpriteRenderer sprite;
+
+    Vector3 minBounds;
+
+    Vector3 maxBounds;
+
     private void Awake() {
 
         if (instance == null) {
@@ -35,6 +45,10 @@ public class LevelManager : MonoBehaviour
         totalSoldiers = 0;
         ResumeGame();
         UpdateCount();
+
+        minBounds = sprite.bounds.min;
+
+        maxBounds = sprite.bounds.max;
     }
 
     private void Update() {
@@ -75,7 +89,7 @@ public class LevelManager : MonoBehaviour
 
     void UpdateCount() {
 
-        countText.text = "Soldiers: " + totalSoldiers.ToString();
+        countText.text = "Soldiers  Left: " + totalSoldiers.ToString();
     }
 
     void ResetGame() {
