@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Tree : MonoBehaviour
 {
-    BoxCollider2D collider;
+    PolygonCollider2D collider;
+
+    private void Awake() {
+
+        collider = GetComponent<PolygonCollider2D>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         
