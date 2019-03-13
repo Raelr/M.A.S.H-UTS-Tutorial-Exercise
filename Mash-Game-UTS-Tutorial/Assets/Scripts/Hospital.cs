@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Hospital : MonoBehaviour
 {
-    BoxCollider2D collider;
+    PolygonCollider2D collider;
 
     private void Awake() {
 
-        collider = GetComponent<BoxCollider2D>();
+        collider = GetComponent<PolygonCollider2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

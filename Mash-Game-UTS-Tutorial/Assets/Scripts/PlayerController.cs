@@ -17,11 +17,11 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rigidbody;
 
-    BoxCollider2D collider;
+    PolygonCollider2D collider;
 
     private void Awake() {
 
-        collider = GetComponent<BoxCollider2D>();
+        collider = GetComponent<PolygonCollider2D>();
 
         rigidbody = GetComponent<Rigidbody2D>();
 

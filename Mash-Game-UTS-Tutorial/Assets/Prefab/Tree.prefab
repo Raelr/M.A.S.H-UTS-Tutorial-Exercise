@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3082834659474114446}
   - component: {fileID: 4631890126422933232}
   - component: {fileID: 1287020166019847239}
-  - component: {fileID: 5537025421655555838}
   - component: {fileID: 5552232822906823055}
+  - component: {fileID: 4830298998315213808}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3544142234653908402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.09491756, y: -0.47410864, z: -0.13867188}
-  m_LocalScale: {x: 0.6875, y: 1.7993, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 575697722efa34749b1bf8b7351e6690, type: 2}
+  - {fileID: 2100000, guid: a9ef913b0b0d5ca488b0921adb7d3884, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,8 +79,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!61 &5537025421655555838
-BoxCollider2D:
+--- !u!114 &5552232822906823055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544142234653908402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec032d7eddb4d2c4ebfc141baede8c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &4830298998315213808
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,18 +114,50 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &5552232822906823055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3544142234653908402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec032d7eddb4d2c4ebfc141baede8c19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Points:
+    m_Paths:
+    - - {x: 0.17561659, y: -0.05947463}
+      - {x: 0.1578773, y: -0.04736638}
+      - {x: 0.10195629, y: -0.029783249}
+      - {x: 0.10029197, y: 0.016878605}
+      - {x: 0.08729013, y: 0.020469984}
+      - {x: 0.087185465, y: 0.1216774}
+      - {x: 0.02019914, y: 0.18059573}
+      - {x: -0.08305836, y: 0.08041303}
+      - {x: -0.121245146, y: 0.099691555}
+      - {x: -0.14572613, y: 0.0801975}
+      - {x: -0.14559683, y: 0.039593857}
+      - {x: -0.36345255, y: -0.1892744}
+      - {x: -0.31286603, y: -0.26007733}
+      - {x: -0.25341365, y: -0.2192394}
+      - {x: -0.19519958, y: -0.27412367}
+      - {x: -0.13640492, y: -0.23602557}
+      - {x: -0.09512886, y: -0.26680565}
+      - {x: -0.11240952, y: -0.2949142}
+      - {x: -0.16092984, y: -0.38302445}
+      - {x: -0.1252869, y: -0.4265426}
+      - {x: -0.10201963, y: -0.42769355}
+      - {x: -0.07036066, y: -0.36058426}
+      - {x: -0.06734745, y: -0.4129548}
+      - {x: -0.0813148, y: -0.4188087}
+      - {x: -0.07864889, y: -0.44093722}
+      - {x: -0.055496454, y: -0.46283215}
+      - {x: -0.023542326, y: -0.4384408}
+      - {x: -0.040894985, y: -0.38264298}
+      - {x: -0.016205788, y: -0.41190505}
+      - {x: 0.030487776, y: -0.42564258}
+      - {x: 0.08524259, y: -0.42393732}
+      - {x: 0.08351152, y: -0.40542436}
+      - {x: 0.02131494, y: -0.3563745}
+      - {x: 0.05166602, y: -0.31325954}
+      - {x: 0.050058525, y: -0.26612377}
+      - {x: 0.036058348, y: -0.23966186}
+      - {x: 0.07153344, y: -0.21929273}
+      - {x: 0.14353022, y: -0.28621444}
+      - {x: 0.17467062, y: -0.2838332}
+      - {x: 0.2091175, y: -0.25029397}
+      - {x: 0.23378143, y: -0.23703043}
+      - {x: 0.28455147, y: -0.19277231}
+      - {x: 0.28611654, y: -0.17175683}
+      - {x: 0.23759899, y: -0.12169608}
+      - {x: 0.2108582, y: -0.114832245}

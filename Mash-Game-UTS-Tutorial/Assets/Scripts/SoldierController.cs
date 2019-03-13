@@ -5,11 +5,11 @@ using UnityEngine;
 public class SoldierController : MonoBehaviour
 {
 
-    BoxCollider2D collider;
+    PolygonCollider2D collider;
     // Start is called before the first frame update
     void Start()
     {
-        collider = GetComponent<BoxCollider2D>();
+        collider = GetComponent<PolygonCollider2D>();
         LevelManager.instance.IncrementSoldierCount();
     }
 
